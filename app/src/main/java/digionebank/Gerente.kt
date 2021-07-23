@@ -1,9 +1,13 @@
 package one.digitalinnovation.digionebank
 
+import digionebank.Logavel
+
 class Gerente(
     nome: String,
     cpf: String,
     salario: Double,
-) : Funcionario(nome = nome, cpf = cpf, salario = salario) {
+    val senha: String
+) : Funcionario(nome = nome, cpf = cpf, salario = salario), Logavel {
     override fun calculoAuxilio(): Double = salario * 0.4
+    override fun login(): Boolean = "1234" == senha
 }

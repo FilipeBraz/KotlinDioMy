@@ -6,3 +6,4 @@ enum class ClienteTipo(val descricao: String) {
     PJ("Pessoa Jurídica")
 
 }
+
